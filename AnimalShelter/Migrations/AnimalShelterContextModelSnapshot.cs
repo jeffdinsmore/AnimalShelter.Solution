@@ -162,6 +162,26 @@ namespace animalshelter.Migrations
                             Gender = "Male",
                             Name = "Mocha",
                             Species = "Dog"
+                        },
+                        new
+                        {
+                            AnimalId = 13,
+                            AgeMonths = 7,
+                            AgeYears = 22,
+                            Breed = "Siamese",
+                            Gender = "Female",
+                            Name = "Randoveer",
+                            Species = "Cat"
+                        },
+                        new
+                        {
+                            AnimalId = 14,
+                            AgeMonths = 7,
+                            AgeYears = 1,
+                            Breed = "Bassett Hound",
+                            Gender = "Male",
+                            Name = "Mr. Bassett Hound",
+                            Species = "Dog"
                         });
                 });
 #pragma warning restore 612, 618

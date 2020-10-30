@@ -43,7 +43,7 @@ namespace AnimalShelter.Controllers
       {
         query = query.Where(entry => entry.Breed.Contains(breed));
       }
-      if (ageYears != 0)
+      if (ageYears != (-1))
       {
         query = query.Where(entry => entry.AgeYears == ageYears);
       }
