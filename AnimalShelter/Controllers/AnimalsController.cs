@@ -89,8 +89,15 @@ namespace AnimalShelter.Controllers
     [HttpGet("Random")]
     public ActionResult<Animal> Get()
     {
+      List<Animal> model = _db.Animals.Reverse().ToList();
+      int maxValue = model.FirstOrDefault(x => x.Name).AnimalId;
+      // var max = model.OrderByDescending(model => model.AnimalId).First();
+      // int maxValue = max.FirstOrDefault(AnimalId);
+      // var max = model.Where(x => x.AnimalId == model.Max(y => y.AnimalId));
+      // string george = model.AsQueryable().Max();
+      // int maxValue = Int32.Parse(max);
       int minimumValue = 1;
-      int maximumValue = 15;
+      int maximumValue = maxValue;
       Random random = new Random();
       int randomId = random.Next(minimumValue, maximumValue);
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randomId);
