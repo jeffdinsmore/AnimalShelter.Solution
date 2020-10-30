@@ -97,6 +97,7 @@ namespace AnimalShelter.Controllers
       int maximumValue = maxValue + 1;
       Random random = new Random();
       int randomId = random.Next(minimumValue, maximumValue);
+      
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randomId);
     }
 

@@ -24,7 +24,10 @@ namespace AnimalShelter.Models
           new Animal { AnimalId = 9, Name = "Winnie", Species = "Cat", Breed = "Bombay", AgeYears = 0, AgeMonths = 9, Gender = "Female" },
           new Animal { AnimalId = 10, Name = "Cocoa", Species = "Cat", Breed = "Burmese", AgeYears = 0, AgeMonths = 8, Gender = "Male" },
           new Animal { AnimalId = 11, Name = "Coffee", Species = "Dog", Breed = "Apple Head Chihuahua", AgeYears = 3, AgeMonths = 8, Gender = "Female" },
-          new Animal { AnimalId = 12, Name = "Mocha", Species = "Dog", Breed = "Miniature Pinscher", AgeYears = 4, AgeMonths = 4, Gender = "Male" }
+          new Animal { AnimalId = 12, Name = "Mocha", Species = "Dog", Breed = "Miniature Pinscher", AgeYears = 4, AgeMonths = 4, Gender = "Male" },
+          new Animal { AnimalId = 13, Name = "Randoveer", Species = "Cat", Breed = "Siamese", AgeYears = 22, AgeMonths = 7, Gender = "Female" },
+          new Animal { AnimalId = 14, Name = "Mr. Bassett Hound", Species = "Dog", Breed = "Bassett Hound", AgeYears = 1, AgeMonths = 7, Gender = "Male" }
+
         );
     }
   }
