@@ -85,6 +85,16 @@ namespace AnimalShelter.Controllers
     {
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
     }
+    // GET api/animals/5
+    [HttpGet("Random")]
+    public ActionResult<Animal> Get()
+    {
+      int minimumValue = 1;
+      int maximumValue = 15;
+      Random random = new Random();
+      int randomId = random.Next(minimumValue, maximumValue);
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randomId);
+    }
 
     // PUT api/animals/5
     [HttpPut("{id}")]
