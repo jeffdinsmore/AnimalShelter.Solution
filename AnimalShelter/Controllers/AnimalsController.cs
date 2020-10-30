@@ -90,15 +90,10 @@ namespace AnimalShelter.Controllers
     public ActionResult<Animal> Get()
     {
       List<Animal> model = _db.Animals.ToList();
-      var sortedList = model.OrderByDescending(x => x.AnimalId);
-      var maxValue = sortedList.First().AnimalId;
-      var minValue = model.First().AnimalId;
-      int minimumValue = minValue;
-      int maximumValue = maxValue + 1;
       Random random = new Random();
-      int randomId = random.Next(minimumValue, maximumValue);
-      
-      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == randomId);
+      int index = random.Next(model.Count);
+      Console.WriteLine(model.Count);
+      return model[index];
     }
 
     // PUT api/animals/5
