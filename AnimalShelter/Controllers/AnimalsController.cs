@@ -4,7 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using AnimalShelter.Models;
+using Microsoft.OpenApi.Models;
+using System.Text;
 
 namespace AnimalShelter.Controllers
 {
@@ -21,13 +27,13 @@ namespace AnimalShelter.Controllers
 
     // GET api/animals
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get(string name,string species, string breed, string ageYears, string ageMonths, string gender, int page, int size)
+    public ActionResult<IEnumerable<Animal>> Get(string name,string species, string breed, int ageYears, int ageMonths, string gender, int page, int size)
     {
       var query = _db.Animals.AsQueryable();
 
       if (name != null)
       {
-        query = query.Where(entry => entry.Name == name);
+        query = query.Where(entry => entry.Name.Contains(name));
       }
       if (species != null)
       {
@@ -35,13 +41,13 @@ namespace AnimalShelter.Controllers
       }
       if (breed != null)
       {
-        query = query.Where(entry => entry.Breed == breed);
+        query = query.Where(entry => entry.Breed.Contains(breed));
       }
-      if (ageYears != null)
+      if (ageYears != 0)
       {
         query = query.Where(entry => entry.AgeYears == ageYears);
       }
-      if (ageMonths != null)
+      if (ageMonths != 0)
       {
         query = query.Where(entry => entry.AgeMonths == ageMonths);
       }
@@ -57,7 +63,7 @@ namespace AnimalShelter.Controllers
         }
         else
         {
-          size = 2;
+          size = 3;
         }
         var entries = query.OrderBy(o => o.Breed).Skip((page - 1) * size).Take(size).ToList(); //finds the entries to be displayed
         query = entries.AsQueryable();
