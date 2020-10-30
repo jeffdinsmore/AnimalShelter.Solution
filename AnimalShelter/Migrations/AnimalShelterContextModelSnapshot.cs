@@ -67,7 +67,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 3,
                             AgeMonths = 2,
-                            AgeYears = 1,
+                            AgeYears = 0,
                             Breed = "Tabby",
                             Gender = "Female",
                             Name = "River",
@@ -87,7 +87,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 5,
                             AgeMonths = 3,
-                            AgeYears = 1,
+                            AgeYears = 0,
                             Breed = "Birman",
                             Gender = "Male",
                             Name = "Dave",
@@ -97,7 +97,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 6,
                             AgeMonths = 4,
-                            AgeYears = 1,
+                            AgeYears = 0,
                             Breed = "American Bobtail",
                             Gender = "Male",
                             Name = "Carl",
@@ -107,7 +107,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 7,
                             AgeMonths = 0,
-                            AgeYears = 1,
+                            AgeYears = 0,
                             Breed = "Bengal",
                             Gender = "Female",
                             Name = "Suzie",
@@ -147,7 +147,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 11,
                             AgeMonths = 8,
-                            AgeYears = 3,
+                            AgeYears = 0,
                             Breed = "Apple Head Chihuahua",
                             Gender = "Female",
                             Name = "Coffee",
@@ -157,7 +157,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 12,
                             AgeMonths = 4,
-                            AgeYears = 4,
+                            AgeYears = 0,
                             Breed = "Miniature Pinscher",
                             Gender = "Male",
                             Name = "Mocha",
@@ -167,7 +167,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 13,
                             AgeMonths = 7,
-                            AgeYears = 22,
+                            AgeYears = 0,
                             Breed = "Siamese",
                             Gender = "Female",
                             Name = "Randoveer",
@@ -177,7 +177,7 @@ namespace animalshelter.Migrations
                         {
                             AnimalId = 14,
                             AgeMonths = 7,
-                            AgeYears = 1,
+                            AgeYears = 0,
                             Breed = "Bassett Hound",
                             Gender = "Male",
                             Name = "Mr. Bassett Hound",

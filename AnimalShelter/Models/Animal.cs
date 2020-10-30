@@ -4,7 +4,7 @@ namespace AnimalShelter.Models
 {
 public class Animal
   {
-    private string default = -1;
+    private int _defaultValue = -1;
     public int AnimalId { get; set; }
     [Required]
     [StringLength(20)]
@@ -18,10 +18,11 @@ public class Animal
     public int AgeYears {
       get
       {
-        return AgeYears;
-      } set
+        return _defaultValue;
+      }
+      set
       {
-        AgeYears = -1;
+        _defaultValue = value;
       }
     }
     [Required]
