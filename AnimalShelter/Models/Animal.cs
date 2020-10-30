@@ -13,8 +13,11 @@ public class Animal
     [Required]
     public string Breed { get; set; }
     [Required]
-    [Range(0, 40, ErrorMessage = "Age must be between 0 and 40.")]
-    public int Age { get; set; }
+    [Range(0, 40, ErrorMessage = "Age years must be between 0 and 40.")]
+    public int AgeYears { get; set; }
+    [Required]
+    [Range(0, 11, ErrorMessage = "Age months must be between 0 and 11.")]
+    public int AgeMonths { get; set; }
     [Required]
     public string Gender { get; set; }
   }
