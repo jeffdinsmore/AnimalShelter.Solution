@@ -4,7 +4,6 @@ namespace AnimalShelter.Models
 {
 public class Animal
   {
-    private int _defaultValue = -1;
     public int AnimalId { get; set; }
     [Required]
     [StringLength(20)]
@@ -14,17 +13,8 @@ public class Animal
     [Required]
     public string Breed { get; set; }
     [Required]
-    [Range(0, 40, ErrorMessage = "Age years must be between 0 and 40.")]
-    public int AgeYears {
-      get
-      {
-        return _defaultValue;
-      }
-      set
-      {
-        _defaultValue = value;
-      }
-    }
+    [Range(-1, 40, ErrorMessage = "Age years must be between 0 and 40.")]
+    public int AgeYears { get; set; }
     [Required]
     [Range(0, 11, ErrorMessage = "Age months must be between 0 and 11.")]
     public int AgeMonths { get; set; }
